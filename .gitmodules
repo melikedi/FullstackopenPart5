@@ -1,0 +1,3 @@
+[submodule "PlaywrightE2ETestForFullstackPart5"]
+	path = PlaywrightE2ETestForFullstackPart5
+	url = https://github.com/melikedi/PlaywrightE2ETestForFullstackPart5.git
