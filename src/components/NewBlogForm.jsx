@@ -24,6 +24,7 @@ function NewBlogForm(props) {
             value={title}
             name="Title"
             placeholder='title'
+            data-testid='Title'
             onChange={(event) => setTitle(event.target.value)}/>
         </div>
         <div>
@@ -33,6 +34,7 @@ function NewBlogForm(props) {
             value={author}
             name="Author"
             placeholder='author'
+            data-testid='Author'
             onChange={(event) => setAuthor(event.target.value)}/>
         </div>
         <div>
@@ -42,6 +44,7 @@ function NewBlogForm(props) {
             value={url}
             name="URL"
             placeholder='url'
+             data-testid='Url'
             onChange={(event) => setURL(event.target.value)}/>
         </div>
         <button type='submit'>create</button>

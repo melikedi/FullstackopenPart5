@@ -46,6 +46,7 @@ const App = () => {
   }
   const handleBlogUpdate = async (blogToUpdate) => {
     try {
+      console.log(blogToUpdate)
       const updatedBlog = await blogService.updateBlog(blogToUpdate)
       updatedBlog.username = blogToUpdate.username
       setBlogs(blogs.map(b => b.id===updatedBlog.id ? updatedBlog : b).sort((b1,b2) => { return b2.likes - b1.likes}))
@@ -113,7 +114,7 @@ const App = () => {
       <p>
         {user.name} logged-in
         <br/>
-        <span><button onClick={(() => {
+        <span><button data-testid='Logout' onClick={(() => {
           window.localStorage.clear()
           setUser(null)
         })}>log out</button></span>

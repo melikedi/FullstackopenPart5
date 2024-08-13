@@ -32,13 +32,13 @@ const Blog = ({ blog, handleBlogUpdate, handleBlogDelete, removeButtonVisible })
     fontWeight: 'bold'
   }
   return (
-    <div style={blogStyle}>
-      <span style={titleStyle}>{blog.title}</span> by {blog.author} <button onClick={toggleDetailsVisibility}>{detailButtonName}</button>
+    <div data-testid='blogItem' style={blogStyle}>
+      <span data-testid='blogTitle' style={titleStyle}>{blog.title}</span> by {blog.author} <button data-testid='viewbutton' onClick={toggleDetailsVisibility}>{detailButtonName}</button>
       <div style={showDetailVisible}><span style={labelStyle}>URL :</span>{blog.url}</div>
-      <div style={showDetailVisible}><span style={labelStyle}>Likes :</span>{blog.likes} <button onClick={handleLikeBlog}>like</button></div>
+      <div style={showDetailVisible}><span style={labelStyle}>Likes :</span> <span className='blogLikes'> {blog.likes} </span> <button data-testid='likebutton' onClick={handleLikeBlog}>like</button></div>
       <div style={showDetailVisible}><span style={labelStyle}>Author :</span>{blog.author}</div>
       <div style={showDetailVisible}><span style={labelStyle}>User :</span>{blog.username}</div>
-      <div style={showRemoveButtonVisible}><button onClick={handleRemoveBlog}>remove</button></div>
+      <div style={showRemoveButtonVisible}><button data-testid='removebutton' onClick={handleRemoveBlog}>remove</button></div>
     </div>
 
   )

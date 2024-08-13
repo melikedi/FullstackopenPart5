@@ -11,6 +11,7 @@ function LoginForm(props) {
             type='text'
             value={props.username}
             name="Username"
+            data-testid='Username'
             onChange={props.handleUsernameChange}/>
         </div>
         <div>
@@ -19,9 +20,10 @@ function LoginForm(props) {
             type='text'
             value={props.password}
             name="Password"
+            data-testid='Password'
             onChange={props.handlePasswordChange}/>
         </div>
-        <button type='submit'>login</button>
+        <button data-testid='Login' type='submit'>login</button>
       </form>
 
 
